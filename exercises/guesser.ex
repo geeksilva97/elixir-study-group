@@ -15,7 +15,7 @@ defmodule Guesser do
   # Below is the same implementation without case
   def guess2(actual, low..high = range) do
     halfway = div(low + high, 2)
-    IO.puts "Its it #{halfway}?"
+    IO.puts "Is it #{halfway}?"
     guess_helper(actual, halfway, range)
   end   
 
