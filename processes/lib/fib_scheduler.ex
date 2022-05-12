@@ -18,7 +18,7 @@ defmodule FibScheduler do
         else
           Enum.sort(results, fn {n1, _}, {n2, _} -> n1 <= n2 end)
         end
-      { :answer, pid } ->
+      { :answer, number, result, _pid } ->
         schedule_processes(processes, queue, [ {number, result} | results ])
     end
 
