@@ -46,11 +46,29 @@ iex(6)> Processes.info(me, :messages)
 {:messages, [:hi, "What's your name?"]}
 ```
 
+to read a message we can use `receive` as following
+
+```ex
+receive do
+  some_pattern ->
+    fun_1
+    fun_2
+  after 2000 ->
+    IO.puts "timeout..."
+end
+```
+
 ## Server processes
 
+Server processes are those which run forever. It handle all the incoming messages
+
+MathServer
+
 ## Linking processes
+Linked processes can know when each other fail
 
 ## Monitoring processes
+Monitoring is closer to links, but the status of existing is passed in one direction only, from the monitored process to the monitor (hint: almost supervisors).
 
 ## Installation
 
